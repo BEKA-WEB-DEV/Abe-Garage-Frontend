@@ -20,7 +20,7 @@ const createCustomer = async (formData, loggedInEmployeeToken) => {
       formData,
       config
     );
-    console.log(response);
+    // console.log(response);
     return response;
   } catch (error) {
     // Handle error here
@@ -40,7 +40,7 @@ const getAllCustomer = async (token) => {
   const response = await axiosBase.get(
     `${api_url}/api/customer/all`,requestOptions
   );
-  console.log(response);
+  // console.log(response);
   return response;
 };
 
@@ -57,11 +57,11 @@ const getCustomerById = async (customer_id, token) => {
     `${api_url}/api/customer/${customer_id}`,
     requestOptions
   );
-  console.log(response);
+  // console.log(response);
   return response;
 };
 
-///api/customers/edit/:customer_id
+//api/customers/edit/:customer_id
 
 const updateCustomerById = async (formData, token) => {
   const requestOptions = {
@@ -77,12 +77,9 @@ const updateCustomerById = async (formData, token) => {
     formData,
     requestOptions
   );
-  console.log(response);
+  // console.log(response);
   return response;
 };
-//   console.log(response);
-//   return response;
-// };
 
 // Export all the functions
 const customerService = {

@@ -13,7 +13,7 @@ const createEmployee = async (formData, loggedInEmployeeToken) => {
     },
     body: JSON.stringify(formData)
   };
-  console.log(requestOptions);
+  // console.log(requestOptions);
   const response = await fetch(`${api_url}/api/employee/add`, requestOptions);
   return response;
 }
@@ -47,7 +47,7 @@ const deleteEmployee = async (employee_id, token) => {
     `${api_url}/api/employee/${employee_id}`,
     requestOptions
   );
-  console.log(response);
+  // console.log(response);
   return response.ok;
 };
 
@@ -62,7 +62,7 @@ const getEmployeeById = async (employee_id, token) => {
         "x-access-token": token,
       },
     });
-  console.log(response);
+  // console.log(response);
     return response;
 }; 
   
@@ -72,7 +72,7 @@ const editEmployee = async (formData, token) => {
       "x-access-token": token,
     },
   });
-  console.log(response);
+  // console.log(response);
   return response;
 };
 

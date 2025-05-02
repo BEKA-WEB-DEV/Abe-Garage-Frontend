@@ -19,7 +19,7 @@ const addService = async (serviceData, loggedInEmployeeToken) => {
     if (response.status !== 200) {
       throw new Error(`Failed to add service: ${response.statusText}`);
     }
-    console.log(response);
+    // console.log(response);
     return response;
   } catch (error) {
     // Handle error here
@@ -64,8 +64,8 @@ const getSingleService = async (service_id, token) => {
     `${api_url}/api/service/single/${service_id}`,
     requestOptions
   );
-  console.log(response.data); // Log the service data
-  return response.data; // Return the data part of the response
+  // console.log(response.data); 
+  return response.data; 
 };
 
 const editService = async (serviceData, token) => {
@@ -81,12 +81,12 @@ const editService = async (serviceData, token) => {
     serviceData,
     requestOptions
   );
-  console.log(response);
+  // console.log(response);
   return response;
 };
 
 const deleteServiceById = async (service_id, token) => {
-  console.log(token);
+  // console.log(token);
   const requestOptions = {
     method: "DELETE",
     headers: {

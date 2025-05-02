@@ -17,7 +17,7 @@ const getAllServices = async (token) => {
     `${api_url}/api/service/all`,
     requestOptions
   );
-  console.log(response);
+  // console.log(response);
   return response;
 };
 
@@ -55,7 +55,7 @@ const getAllOrder = async (token) => {
     `${api_url}/api/order/all`,
     requestOptions
   );
-  console.log(response);
+  // console.log(response);
   return response;
 };
 
@@ -103,7 +103,7 @@ const updateOrderProgress = async (order_id, updatedOrder) => {
       `/api/order/status/${order_id}`,
       updatedOrder
     );
-    console.log(response);
+    // console.log(response);
     return response.data;
   } catch (error) {
     throw new Error(`Failed to update order progress: ${error.message}`);
@@ -123,7 +123,7 @@ const getOrderByOrderId = async (order_id, token) => {
     `${api_url}/api/order/single/${order_id}`,
     requestOptions
   );
-  console.log(response);
+  // console.log(response);
   return response;
 };
 
@@ -141,7 +141,7 @@ const updateOrder = async (formData, token) => {
     formData,
     requestOptions
   );
-  console.log(response);
+  // console.log(response);
   return response;
 };
 
@@ -154,12 +154,12 @@ const getOrdersByCustomerId = async (customer_id, token) => {
       "x-access-token": token,
     },
   };
-  console.log(customer_id);
+  // console.log(customer_id);
   const response = await axiosBase.get(
     `${api_url}/api/order/all/${customer_id}`,
     requestOptions
   );
-  console.log(response.data);
+  // console.log(response.data);
   return response.data;
 };
 
