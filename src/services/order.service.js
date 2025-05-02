@@ -78,7 +78,7 @@ const getAllOrders = async (token) => {
 const orderedServices = async (order_id) => {
   try {
     const response = await axiosBase.get(`/api/order/single/${order_id}`);
-    console.log(response);
+    // console.log(response);
     return response.data;
   } catch (error) {
     throw new Error(`Failed to fetch ordered services: ${error.message}`);
@@ -89,7 +89,7 @@ const orderedServices = async (order_id) => {
 const getOrderByID = async (order_id) => {
   try {
     const response = await axiosBase.get(`/api/order/single/${order_id}`);
-    console.log(response);
+    // console.log(response);
     return response.data;
   } catch (error) {
     throw new Error(`Failed to fetch order by id: ${error.message}`);

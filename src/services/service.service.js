@@ -40,11 +40,11 @@ const getAllServices = async (token) => {
       `${api_url}/api/service/all`,
       requestOptions
     );
-    console.log(response);
+    // console.log(response);
     if (response.status !== 200) {
       throw new Error(`Failed to fetch services: ${response.statusText}`);
     }
-    console.log(response.data); // Logging data here
+    // console.log(response.data); 
     return response.data;
   } catch (error) {
     console.error("Error fetching services:", error);

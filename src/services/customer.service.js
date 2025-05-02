@@ -24,7 +24,7 @@ const createCustomer = async (formData, loggedInEmployeeToken) => {
     return response;
   } catch (error) {
     // Handle error here
-    console.log(error.message);
+    // console.log(error.message);
     throw error;
   }
 };
